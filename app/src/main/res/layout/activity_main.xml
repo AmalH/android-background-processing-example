@@ -1,34 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="30dp"
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-90dp"
+        android:layout_marginBottom="70dp"
+        android:textSize="9pt"
+        android:textColor="#2a2a2a"
+        android:text="Running a background service example"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-100dp"
+        android:layout_marginBottom="40dp"
+        android:padding="50dp"
+        android:gravity="center_horizontal"
+        android:textColor="#545454"
+        android:text="This service will keep on displaying a toast, even when the app is stopped"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        tools:context=".MainActivity">
     <Button
         android:id="@+id/startBtn"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:text="Start background services"
+        android:text="Start"
         android:background="@color/colorPrimary"
         android:textSize="8pt"
         android:textColor="#FFF"
         android:textAllCaps="false"/>
     <Button
         android:id="@+id/stopBtn"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
         android:textSize="8pt"
-        android:text="Stop background services"
+        android:textStyle="bold"
+        android:text="Stop"
         android:background="@color/colorPrimary"
         android:textColor="#fff"
         android:textAllCaps="false"/>
+    </LinearLayout>
 
 </LinearLayout>

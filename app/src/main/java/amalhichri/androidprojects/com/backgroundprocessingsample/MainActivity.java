@@ -6,6 +6,7 @@ import android.app.job.JobScheduler;
 import android.content.ComponentName;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -24,7 +25,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 ComponentName componentName = new ComponentName((MainActivity.this), MyBackgroundService.class);
                 JobInfo jobInfo = new JobInfo.Builder(1, componentName)
-                        .setPeriodic(5000).build();
+                        .setPeriodic(1500).build();
                 jobScheduler.schedule(jobInfo);
             }
         });
@@ -33,6 +34,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 jobScheduler.cancelAll();
+                Toast.makeText(getApplicationContext(), "Service stopped!", Toast.LENGTH_SHORT).show();
             }
         });
     }
